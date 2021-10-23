@@ -7,7 +7,7 @@ resource "aws_instance" "app-server1" {
   instance_type = "t2.micro"
   key_name = "vodafone-devops"
   provisioner "local-exec" {
-  command = "echo hello  && echo ${aws_instance.app-server1.public_ip} > ./inv"
+  command = "echo ${aws_instance.app-server1.public_ip} > ./inventory"
   }
   tags = {
     Name = "gagan-server-devops"
