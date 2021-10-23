@@ -10,7 +10,8 @@ resource "aws_instance" "app-server1" {
   command = "echo ${aws_instance.app-server1.public_ip} > ./inventory"
   }
   tags = {
-    Name = "gagan-server-devops"
+    Name = "gagan-server-devops-v1"
     dept = "Engineering"
+    env = "Dev"
   }
 }
